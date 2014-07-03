@@ -6,7 +6,8 @@ Command to  run jar file:
 --->3. Use command: java -jar SOAPpopVersion1.jar configurationFile
 
 If jdk version is unmatched, use source code instead:
---->1. Download src.rar
---->2. Go to src folder, which is our source code folder.
---->3. Use command: javac PG.java to compile our source code.
---->4. In src folder, using command: java PG configurationFile to run our software.
+--->1. Download src.tar.gz
+--->2. Use command: tar zxvf src.tar.gz to decompress source code file
+--->3. Go to src folder, which is our source code folder.
+--->4. In sec folder, use command: javac PG.java to compile our source code.
+--->5. In src folder, use command: java PG configurationFile to run our software.
