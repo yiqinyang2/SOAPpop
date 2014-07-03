@@ -1,0 +1,167 @@
+1.  Each thread does this:
+
+   // loop over SNPs
+   for(i=0;i<ncols;i++)  {
+
+     tt = getcolxz( ... );     // cc := all samples, ith SNP
+     copyarr(cc, tblock + xblock*nrows, nrows);     // tblock[ xblock*nrows : (xblock+1)*nrows-1 ] := cc
+     domult(tvecs, tblock, xblock, nrows);          // tvecs := sum_[I,I+1] G_i*G_i
+     vvp(XTX,XTX,tvecs, nrows*nrows);               // Add sum_[I,I+1] to XTX
+     vzero(tblock,nrows*blocksize);
+
+   }
+
+
+   choose blocksize such that (ncols/blocksize)+1 = number of blocks much greater than numthreads
+
+
+   // threads do blocks in turns
+   for(i=0;i<ncols;i++)  {
+
+
+     // function
+
+     cc is local
+     tblock is local
+     tvecs is local
+
+     in: xsnplist
+     in: xindex
+     in: xtypes
+     in: nrows
+     in: xmean
+     in: xfancy
+     in: nkill      // counts killed SNPs printed out
+
+     in:  XTX and mutex
+
+
+     minallelecnt is global
+     maxmissing is global
+     weightmode is global
+     ldregress is global
+
+     ldregression:  make local in thread's function
+       Cf. Mark Hanna's code
+
+
+
+
+
+     
+
+
+
+
+     if ( int(ncols/xblock) % numthreads != mythread )  
+       continue;
+
+     
+
+     tt = getcolxz( ... );
+     copyarr(cc, tblock + xblock*nrows, nrows);
+     domult(tvecs, tblock, xblock, nrows);          // tvecs := sum_[I,I+1] G_i*G_i
+
+     get_mutex();
+     vvp(XTX,XTX,tvecs, nrows*nrows);               // Add sum_[I,I+1] to XTX
+     release_mutex();
+     
+     vzero(tblock,nrows*blocksize);
+
+
+
+
+   }
+
+
+
+
+
+For any value i in [0..nsnps-1], 
+  the contents of tblock are 
+  tblock[ row, col ] = sample row, SNP xblock*blocksize + col
+
+  blocksize = 
+
+
+
+
+
+
+lsregress:
+
+  1.  parameters
+  nsnpldregress : If set to a positive integer, then LD correction is turned on,
+    and input to PCA will be the residual of a regression involving that many
+    previous SNPs, according to physical location.  (default is 0)
+    (new variant name:  ldregress)
+  maxdistldregress : If doing LD correction, this is the maximum genetic distance
+    (in Morgans) for previous SNPs used in LD correction.  (default is none)
+
+  2.  global variable
+    global variable ldregress  
+
+  3.  allocation
+      ldvv (double) ldregress*numindivs
+      ldvv2 (double) ldregress*numindivs
+      vv2 (double) numindivs
+      ldmat (double) ldregress*ldregress
+      ldmat2 (double) ldregress*ldregress
+
+  4.  initialization
+      zero out everything allocated
+      ldmat := identity matrix + 1e-6
+
+
+  5.  loop over numclear
+
+  if ( numclear > 0 ) clearld(ldmat, ldvv, ldregress, nrows, numclear)      // clear space
+  ldreg(ldmat, ldmat2, cc, vv2, ldvv, ldvv2, ldregress, nrows)              // do regression
+  copyarr(ldmat2,ldmat,ldregress*ldregress);                                // save matrix for next iteration
+  copyarr(vv2,cc,nrows);                                                    // save vector for next iteration
+  copyarr(ldvv2, ldvv, ldregress*nrows);                                    // save vector for next iteration
+
+
+ISSUE:  if this is done by block, and different threads do different blocks, then
+  for the first SNP of a new block, the ldvv2, vv2, and ldmat2 are wrong.
+  This will be a problem in Mark Hanna's code and in mine as well.
+
+A completely correct solution requires these three arrays to be 
+  (1) allocated one per thread and (2) preserved across calls to the thread function
+
+(Look at this after I understand LD Regression algorithm.)
+      
+
+
+
+
+
+1.  global mutex:  declare
+
+  #include <pthread.h>
+  pthread_mutex_t mutex_xtx = PTHREAD_MUTEX_INITIALIZER
+
+2.  global variable:  numthreads = 1
+  readcommands reads it
+
+3.  thread.h, thread.c
+  type for arguments
+  function for marshalling arguments
+  thread function
+
+3.  create threads and launch them
+4.  join threads
+
+
+
+
+
+
+
+
+
+
+
+
+
+

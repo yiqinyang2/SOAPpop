@@ -1,0 +1,8 @@
+set terminal postscript color
+set title  "" 
+set xlabel  "eigenvector 1" 
+set ylabel  "eigenvector 2" 
+plot  "1_1.pca.evec.1:2:1" using 2:3 title "1" , \
+ "1_1.pca.evec.1:2:2" using 2:3 title "2" , \
+ "1_1.pca.evec.1:2:3" using 2:3 title "3" 
+## pause 9999

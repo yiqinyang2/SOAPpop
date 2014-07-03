@@ -1,0 +1,22 @@
+Change Log
+
+Changes since version 2.1
+
+16/12/2011
+
+*  Changed RMAX parameter to 150 (from 50).
+
+27/02/2008
+
+* Added -prefix <string> option to all programs.
+	Affects: all
+* Changed all programs to double precision. Removed routines for float precision.
+	Affects: all
+* Bug Fix: Fixed uninitialised pointer in lkgen.c.
+	Affects: lkgen
+* Bug Fix: stat output is now tab delimited.
+	Affects: stat
+* Added -loc option to stat to allow position output in res.txt file.
+	Affects: stat
+* Combined nrutils.c with tools.c to prevent duplicated code.
+	Affects: fin

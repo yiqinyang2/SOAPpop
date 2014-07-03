@@ -1,0 +1,134 @@
+    Usage: finestructure [OPTIONS] datafile <initialpopfile> outputfile
+    	Datafile is a matrix of copy counts.
+	initialpopfile (optional) is a population state e.g. an outputfile.
+	outputfile is the destination.
+    -m <method>		Method to use.  Default: oMCMC.
+			<method> is either MCMCwithTree, oMCMC (MCMC without tree), 
+			SplitMerge, Tree, or admixture, or a contraction of any.
+			Note that admixture does not infer the population
+ 			so should be provided with a good one in "initialpopfile".
+    -I <x>          	Initial number of populations.  <x> is either a number
+			or "n" for the number of individuals, or "l" for label detected 
+			populations.  Default is 1.
+    -s <s>		Sets the RNG seed to s (>0)
+    -i <i>		Ignores the first i lines of the input file
+    -x <num>		Number of burn in iterations for MCMC method.
+    -y <num>		Number of sample iterations for MCMC method.
+    -z <num>		Thin interval in the output file, for MCMC method.
+    -t <num>		Maximum number of tree comparisons for splitting/merging.
+    -K                  Fix the number of populations to whatever you started with.
+                        This would be set by '-I' or by an initial state file.
+    -l <filename>	Specify the average copy length datafile.  -i,-X,-Y options
+			*preciding* this file will affect this read; you can set different
+			options for the copy rate datafile by specifying these -i,-X,-Y again
+			after the -l option.
+    -u <datatype>	Use a data inference method; one of :
+			counts: use only the copy counts data. (default if -l not specified)
+			lengths: use only the copy length data (still needs valid counts data!)
+			totallengths: use the mean length of chunk sizes 
+			all: use all data (careful: this may not be statistically valid).
+			default: use counts and totallengths (default with -l specified).
+    -a <num>		Set alpha, the prior of the number of parameters
+			(default: 1.0).
+    -c <num>		Set the likelihood correction factor: L_{used}=L^{1/<corfactor>}.
+			(default: 1.0)
+    -B <model>		Choose a model for beta:
+			1/e/E:	Equipartition model of Pella and Masuda.
+			2/c/C:	Constant model.
+			4/o/O:  F model of Falush et al 2003 with a single parameter
+				for all populations (default).
+    -b <num>(,<num>,..)	Hyperparameters for ALL models, in the order COUNTS,LENGTHS,MEANS.  
+			COUNTS: *must* be included, even if count matrix not used!
+			For model 1, there are no parameters.
+			For model 2, set the prior of the distribution of
+			population sizes (each population has beta_i=<num>).
+			(default: 1.0).
+			For model 4, set the hyperprior of the distribution of
+			delta and F. Parameters are 
+			(k_f,k_delta,theta_f,theta_delta) for the parameters of the
+			gamma distribution F~Gamma(k_f,theta_f), 
+			and delta~Gamma(k_delta,theta_delta)
+			(default: -b 2,2,0.01,0.01).
+			LENGTHS: 8 parameters:
+			(k_alpha0,k_beta0,k_alpha,k_beta,beta_alpha0,beta_beta0,beta_alpha,beta_beta)
+			MEANS: 6 parameters:
+			(k_betamu, k_alphamu, k_kappa, beta_alphamu,beta_betamu,beta_kappa)
+			Set K parameters negative for fixed =|k|
+			e.g. when finding a tree given the mean parameters.
+    -M <modeltype>	Specify the type of inference model for chunk counts.  
+			<modeltype> accept contractions and lower case, and can be:
+			  1 or Finestructure: standard finestructure model (default).
+			  2 or Normalised: Normalise data row and columns within a population.
+			  3 or MergeOnly: As 2, but only compare populations being merged or split.
+			  4 or Individual: Prior is placed on individual rows instead of 
+					  population rows. (slowest model).
+    -e <name>		Extract details from a state; can be (a unique contraction of):
+			beta: the parameter matrix
+			X: the copying data matrix for populations
+			X2: the normalised copying matrix
+			maxstate: maximum observed posterior probability state
+			meancoincidence: the mean coincidence matrix
+			merge<:value><:split>: create a merge(or split)
+			  population from the mean coincidence.
+			admixture: gets the population as an admixture matrix.
+			Pmatrix: gets the P matrix for the admixture.
+  			range:<from>:<to> gets the iterations in the specified range.
+			thin:<step>: thins the output by step.
+			probability: get the posterior probability of the data
+			given the conditions of the outputfile.
+			likelihood: samples the likelihood of the data given the conditions
+			in the outputfile.
+			tree: extract the tree in newick format and print it to a FOURTH file
+    -F <filename>	Fix the populations specified in the file.  They should be specified as
+			population format, i.e. PopA(ind1,ind2) would fix the data rows ind1 and ind2
+			to always be in the same population (they form a 'super individual')
+			called PopA. Continents are specified with a * before the name, and are treated
+			specially in the tree building phase,  i.e. *ContA(ind1,ind2).  Continents
+			are not merged with the rest of the tree.
+    -T <type>		When using a merge tree, initialisation can be set to the following:
+			1:	Use the initial state "as is".
+			2:	Perform merging to get to best posterior state.
+			3:	Perform full range of moves to to get to best posterior state.
+				This is the default.  Set number of attempts with -x <num>.
+			4:	As 1, but don't flatten maximum copy rates for the main tree.
+			5:	As 2, but don't flatten maximum copy rates for the main tree.
+			6:	As 3, but don't flatten maximum copy rates for the main tree.
+			7:	As 1, but maximise hyperparameters between merges.
+			8:	As 2, but maximise hyperparameters between merges.
+			9:	As 3, but maximise hyperparameters between merges.
+    -o <name>		File containing a state to use for ordering, if not the main file.
+    -k <num>		Change the tree building algorithm.
+			0:	Discard all ordering and likelihood information (default).
+			1:	Maintain ordering.
+			2:	Maintain ordering and likelihood.
+    -X			Specifies that there are row names in the data (not necessary for 
+			ChromoPainter or ChromoCombine style files.)
+    -Y			Specifies that there are column names in the data file (as -X, not necessary.)
+    -v          	Verbose mode
+    -V          	Print Version info
+    -h          	This help message
+	
+    Examples:
+    finestructure -X -Y -m omcmc -i 2 -B 4 -b 2,2,0.01,0.01 -s 1 -x 100000 -y 100000 
+	-z 1000 datafile.csv resfile.xml
+			Infers population structure (-m omcmc) from datafile.csv which
+			contains 2 irrelevent lines (-i 2) with row (-X) and column (-Y)
+			names, using the F model with a global F and Delta (-B 4) using
+			Gamma(2,0.01) distributions. 100000 burn in steps are used (-x)
+			and 100000 further iterations are sampled (-y) keeping every
+			1000th sample (-z).
+    finestructure -X -Y -i 2 -e min datafile.csv resfile.xml resmsfile.xml
+			Create a minimum state file from the MCMC output.
+    finestructure -X -Y -i 2 -m T -t 20000 -B 4 -b -0.003,-0.94,-1,-1 
+	datafile.csv resmsfile.xml restree.xml
+			Create a tree (-m T) from the minimum state using the inferred
+			values of F (0.003) and Delta (0.94), allowing 20000 (-t 20000).
+			different trees to be examined per merge attempt (slow!).
+    finestructure -X -Y -i 2 -m admixture -B 4 -b -0.003,-0.94,-1,-1 -x 100000 -y 100000 
+	-z 1000 datafile.csv resmsfile.xml admixfile.xml
+			Perform admixture (-m admixiture) MCMC using the minimum state 
+			and parameters found as above.
+    finestructure -X -Y -i 2 -e admixture datafile.csv resmsfile.xml admixstate.csv
+			Extract the admixture matrix Q for a state in csv format.  This
+			is useful for making comparisons to the observed admixture matrix.
+    

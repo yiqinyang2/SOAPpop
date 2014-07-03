@@ -1,0 +1,2 @@
+/panfs/ANIMAL/GROUP/group001/fengxikang/phylip/exe/testdata/dnaml/infile
+Y

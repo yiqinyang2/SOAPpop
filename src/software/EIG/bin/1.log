@@ -1,0 +1,1161 @@
+parameter file: 1_1.pca.par
+### THE INPUT PARAMETERS
+##PARAMETER NAME: VALUE
+genotypename: geno
+snpname: snp
+indivname: ind
+evecoutname: 1_1.pca.evec
+evaloutname: 1_1.eval
+altnormstyle: NO
+numoutevec: 2
+numoutlieriter: 5
+numoutlierevec: 10
+outliersigmathresh: 6
+qtmode: 0
+phylipoutname: asd.txt
+## smartpca version: 9003
+norm used
+
+genetic distance set from physical distance
+Multicore implementation; using 8 threads (1 matrix block per side, 8 snp partitions)
+trace:   3464.525
+REMOVED outlier 75 iter 1 evec 1 sigmage -9.427
+REMOVED outlier 76 iter 1 evec 7 sigmage -8.169
+number of samples after outlier removal: 108
+Multicore implementation; using 8 threads (1 matrix block per side, 8 snp partitions)
+trace:   2989.307
+
+## Tracy-Widom statistics: rows: 108  cols: 1478
+  #N    eigenvalue  difference    twstat      p-value effect. n
+   1     16.942848          NA    14.170  2.61305e-17    21.674
+   2     10.963513   -5.979334    12.982  2.13284e-15    29.351
+   3      8.065238   -2.898275    11.655  2.30212e-13    35.761
+   4      5.309325   -2.755913     4.447  8.22128e-05    41.372
+   5      5.242047   -0.067278     7.149   9.0943e-08    42.881
+   6      4.646814   -0.595232     7.253  6.77255e-08    45.885
+   7      3.746036   -0.900778     4.120  0.000169887    49.149
+   8      3.478050   -0.267986     4.514  7.06667e-05    50.886
+   9      3.130986   -0.347064     3.994  0.000223176    52.923
+  10      2.848280   -0.282706     3.634  0.000478613    54.806
+  11      2.732244   -0.116036     4.857  3.20202e-05    56.610
+  12      2.656955   -0.075289     6.926  1.66706e-07    59.194
+  13      2.193101   -0.463854     3.941  0.000250167    63.288
+  14      2.065440   -0.127660     4.519  6.98601e-05    65.693
+  15      1.755331   -0.310109     1.846    0.0134342    68.594
+  16      1.677107   -0.078224     2.345   0.00574092    70.083
+  17      1.576769   -0.100339     2.426   0.00496438    71.926
+  18      1.542713   -0.034056     3.826  0.000320096    73.915
+  19      1.329535   -0.213177     1.361    0.0287837    76.912
+  20      1.310220   -0.019315     2.719   0.00290792    78.503
+  21      1.223612   -0.086608     2.601    0.0036174    81.033
+  22      1.096557   -0.127055     1.109    0.0416453    83.622
+  23      1.048349   -0.048208     1.410    0.0267232    85.358
+  24      1.020356   -0.027992     2.348   0.00570313    87.379
+  25      0.990790   -0.029566     3.418  0.000745655    90.172
+  26      0.897283   -0.093508     2.326   0.00593005    93.977
+  27      0.819965   -0.077318     1.315    0.0308415    97.112
+  28      0.781697   -0.038268     1.508    0.0229835    99.622
+  29      0.733285   -0.048412     1.195    0.0367825   102.421
+  30      0.702705   -0.030580     1.526    0.0223544   105.114
+  31      0.670879   -0.031826     1.788    0.0147621   108.235
+  32      0.629469   -0.041410     1.498    0.0233472   111.766
+  33      0.572795   -0.056674     0.126     0.146306   115.227
+  34      0.511529   -0.061266    -2.002     0.726227   117.625
+  35      0.491052   -0.020478    -2.125     0.759948   118.390
+  36      0.463874   -0.027177    -2.742     0.893466   119.093
+  37      0.455413   -0.008462    -2.268     0.796202   119.360
+  38      0.431549   -0.023864    -2.792     0.901463   120.003
+  39      0.426247   -0.005301    -2.136     0.762835   120.262
+  40      0.418238   -0.008009    -1.585     0.600737   121.059
+  41      0.391669   -0.026569    -2.369     0.820279   122.371
+  42      0.373680   -0.017988    -2.682     0.883375   123.044
+  43      0.354589   -0.019091    -3.180     0.949921   123.475
+  44      0.344403   -0.010186    -3.053     0.936716   123.499
+  45      0.328591   -0.015812    -3.416     0.968961   123.632
+  46      0.317176   -0.011414    -3.482     0.973059   123.458
+  47      0.305032   -0.012145    -3.650     0.981623   123.221
+  48      0.300374   -0.004657    -3.174     0.949432   122.829
+  49      0.288209   -0.012165    -3.359     0.964966   122.848
+  50      0.276592   -0.011617    -3.550     0.976848   122.694
+  51      0.260846   -0.015746    -4.219     0.995935   122.354
+  52      0.257526   -0.003320    -3.734      0.98495   121.395
+  53      0.245811   -0.011716    -4.079     0.993918   120.843
+  54      0.236189   -0.009622    -4.277     0.996585   119.945
+  55      0.231930   -0.004258    -3.931     0.990903   118.831
+  56      0.221497   -0.010433    -4.250     0.996296   118.000
+  57      0.215478   -0.006019    -4.129     0.994726   116.831
+  58      0.205715   -0.009763    -4.452      0.99803   115.732
+  59      0.199291   -0.006423    -4.442     0.997964   114.278
+  60      0.195004   -0.004288    -4.185     0.995511   112.780
+  61      0.193467   -0.001537    -3.558     0.977266   111.481
+  62      0.189386   -0.004081    -3.168     0.948805   110.796
+  63      0.175532   -0.013854    -4.030     0.993037   110.529
+  64      0.171663   -0.003869    -3.720     0.984448   109.242
+  65      0.167568   -0.004095    -3.406     0.968281   108.248
+  66      0.159126   -0.008442    -3.682     0.982971   107.582
+  67      0.156682   -0.002444    -3.153     0.947342   106.531
+  68      0.153233   -0.003449    -2.692     0.885063   106.107
+  69      0.142787   -0.010446    -3.266     0.957722   106.306
+  70      0.141444   -0.001343    -2.521     0.852936   105.656
+  71      0.129267   -0.012177    -3.473     0.972497   106.097
+  72      0.123720   -0.005547    -3.523     0.975393   105.055
+  73      0.120562   -0.003158    -3.181      0.95008   103.864
+  74      0.116474   -0.004087    -2.963      0.92582   103.125
+  75      0.112212   -0.004262    -2.760     0.896347   102.684
+  76      0.107660   -0.004552    -2.598     0.868069   102.556
+  77      0.100681   -0.006980    -2.942        0.923   102.699
+  78      0.094767   -0.005914    -3.192     0.951077   102.131
+  79      0.092086   -0.002681    -2.821     0.905923   100.999
+  80      0.087901   -0.004185    -2.733     0.892041   100.512
+  81      0.084747   -0.003154    -2.414     0.830298   100.138
+  82      0.081517   -0.003230    -2.060     0.742348   100.452
+  83      0.075878   -0.005638    -2.278     0.798773   101.691
+  84      0.073116   -0.002762    -1.836     0.678089   102.332
+  85      0.068237   -0.004879    -1.915     0.701276   104.362
+  86      0.063992   -0.004245    -1.905     0.698538   106.228
+  87      0.061520   -0.002472    -1.376     0.534183   108.217
+  88      0.055908   -0.005612    -1.815     0.671784   112.652
+  89      0.050516   -0.005392    -2.486     0.845629   115.349
+  90      0.047269   -0.003246    -2.633     0.874516   114.975
+  91      0.046286   -0.000983    -1.939     0.708295   113.664
+  92      0.044687   -0.001600    -1.276     0.502327   115.659
+  93      0.039265   -0.005422    -2.174     0.772692   122.345
+  94      0.036727   -0.002538    -2.186     0.775858   122.784
+  95      0.036267   -0.000460    -1.162     0.466335   122.744
+  96      0.031801   -0.004466    -1.926     0.704621   132.420
+  97      0.028488   -0.003313    -2.592     0.866838   134.112
+  98      0.027638   -0.000850    -2.046     0.738386   128.031
+  99      0.024907   -0.002731        NA           NA        NA
+ 100      0.023794   -0.001113        NA           NA        NA
+ 101      0.022311   -0.001482        NA           NA        NA
+ 102      0.021298   -0.001013        NA           NA        NA
+ 103      0.017808   -0.003490        NA           NA        NA
+ 104      0.016581   -0.001227        NA           NA        NA
+ 105      0.014942   -0.001639        NA           NA        NA
+ 106      0.012657   -0.002285        NA           NA        NA
+ 107      0.007828   -0.004829        NA           NA        NA
+    kurtosis           snps    indivs
+ eigenvector    1     3.968     2.844
+ eigenvector    2     4.461     7.274
+population:   0                  WZS    6
+population:   1                  EHL    5
+population:   2                  CWB   10
+population:   3                  LUC    6
+population:   4                   TT    6
+population:   5                  YNT    6
+population:   6                  SCT    6
+population:   7                  GST    4
+population:   8                 HTDE    6
+population:   9                  MIN    6
+population:  10                  BMX    6
+population:  11                  LWH    6
+population:  12                  DRC    4
+population:  13                 HAMS    1
+population:  14                   BP    0
+population:  15                  AWB    1
+population:  16                  JQH    1
+population:  17                   LR    5
+population:  18                   LW    6
+population:  19                   MS    4
+population:  20                   PT    5
+population:  21                  JWB    1
+population:  22                  WWB    6
+population:  23                Xiang    1
+
+## Average divergence between populations:
+dotp:        WZS        WZS      1.600             6          6
+dotp:        WZS        EHL      1.548             6          5
+dotp:        WZS        CWB      1.625             6         10
+dotp:        WZS        LUC      1.359             6          6
+dotp:        WZS         TT      1.376             6          6
+dotp:        WZS        YNT      1.457             6          6
+dotp:        WZS        SCT      1.451             6          6
+dotp:        WZS        GST      1.314             6          4
+dotp:        WZS       HTDE      1.626             6          6
+dotp:        WZS        MIN      1.600             6          6
+dotp:        WZS        BMX      1.610             6          6
+dotp:        WZS        LWH      1.449             6          6
+dotp:        WZS        DRC      1.998             6          4
+dotp:        WZS       HAMS      1.913             6          1
+dotp:        WZS         BP      0.000             6          0
+dotp:        WZS        AWB      1.668             6          1
+dotp:        WZS        JQH      1.433             6          1
+dotp:        WZS         LR      1.724             6          5
+dotp:        WZS         LW      1.761             6          6
+dotp:        WZS         MS      1.728             6          4
+dotp:        WZS         PT      2.005             6          5
+dotp:        WZS        JWB      2.369             6          1
+dotp:        WZS        WWB      2.004             6          6
+dotp:        WZS      Xiang      2.049             6          1
+dotp:        EHL        EHL      1.473             5          5
+dotp:        EHL        CWB      1.714             5         10
+dotp:        EHL        LUC      1.500             5          6
+dotp:        EHL         TT      1.468             5          6
+dotp:        EHL        YNT      1.542             5          6
+dotp:        EHL        SCT      1.599             5          6
+dotp:        EHL        GST      1.481             5          4
+dotp:        EHL       HTDE      1.662             5          6
+dotp:        EHL        MIN      1.554             5          6
+dotp:        EHL        BMX      1.693             5          6
+dotp:        EHL        LWH      1.333             5          6
+dotp:        EHL        DRC      1.833             5          4
+dotp:        EHL       HAMS      1.750             5          1
+dotp:        EHL         BP      0.000             5          0
+dotp:        EHL        AWB      1.412             5          1
+dotp:        EHL        JQH      1.478             5          1
+dotp:        EHL         LR      1.662             5          5
+dotp:        EHL         LW      1.742             5          6
+dotp:        EHL         MS      1.623             5          4
+dotp:        EHL         PT      2.011             5          5
+dotp:        EHL        JWB      2.071             5          1
+dotp:        EHL        WWB      1.823             5          6
+dotp:        EHL      Xiang      2.356             5          1
+dotp:        CWB        CWB      1.720            10         10
+dotp:        CWB        LUC      1.515            10          6
+dotp:        CWB         TT      1.442            10          6
+dotp:        CWB        YNT      1.476            10          6
+dotp:        CWB        SCT      1.535            10          6
+dotp:        CWB        GST      1.367            10          4
+dotp:        CWB       HTDE      1.703            10          6
+dotp:        CWB        MIN      1.675            10          6
+dotp:        CWB        BMX      1.725            10          6
+dotp:        CWB        LWH      1.591            10          6
+dotp:        CWB        DRC      2.069            10          4
+dotp:        CWB       HAMS      1.940            10          1
+dotp:        CWB         BP      0.000            10          0
+dotp:        CWB        AWB      1.843            10          1
+dotp:        CWB        JQH      1.466            10          1
+dotp:        CWB         LR      1.798            10          5
+dotp:        CWB         LW      1.890            10          6
+dotp:        CWB         MS      1.994            10          4
+dotp:        CWB         PT      2.128            10          5
+dotp:        CWB        JWB      2.388            10          1
+dotp:        CWB        WWB      2.021            10          6
+dotp:        CWB      Xiang      2.030            10          1
+dotp:        LUC        LUC      1.032             6          6
+dotp:        LUC         TT      1.169             6          6
+dotp:        LUC        YNT      1.318             6          6
+dotp:        LUC        SCT      1.279             6          6
+dotp:        LUC        GST      1.192             6          4
+dotp:        LUC       HTDE      1.508             6          6
+dotp:        LUC        MIN      1.379             6          6
+dotp:        LUC        BMX      1.406             6          6
+dotp:        LUC        LWH      1.397             6          6
+dotp:        LUC        DRC      1.704             6          4
+dotp:        LUC       HAMS      1.569             6          1
+dotp:        LUC         BP      0.000             6          0
+dotp:        LUC        AWB      1.676             6          1
+dotp:        LUC        JQH      1.299             6          1
+dotp:        LUC         LR      1.497             6          5
+dotp:        LUC         LW      1.602             6          6
+dotp:        LUC         MS      1.734             6          4
+dotp:        LUC         PT      1.836             6          5
+dotp:        LUC        JWB      2.018             6          1
+dotp:        LUC        WWB      1.691             6          6
+dotp:        LUC      Xiang      1.987             6          1
+dotp:         TT         TT      0.674             6          6
+dotp:         TT        YNT      0.969             6          6
+dotp:         TT        SCT      1.021             6          6
+dotp:         TT        GST      0.912             6          4
+dotp:         TT       HTDE      1.126             6          6
+dotp:         TT        MIN      1.333             6          6
+dotp:         TT        BMX      1.144             6          6
+dotp:         TT        LWH      1.380             6          6
+dotp:         TT        DRC      1.631             6          4
+dotp:         TT       HAMS      1.518             6          1
+dotp:         TT         BP      0.000             6          0
+dotp:         TT        AWB      1.610             6          1
+dotp:         TT        JQH      1.223             6          1
+dotp:         TT         LR      1.450             6          5
+dotp:         TT         LW      1.450             6          6
+dotp:         TT         MS      1.735             6          4
+dotp:         TT         PT      1.668             6          5
+dotp:         TT        JWB      2.032             6          1
+dotp:         TT        WWB      1.681             6          6
+dotp:         TT      Xiang      1.997             6          1
+dotp:        YNT        YNT      0.981             6          6
+dotp:        YNT        SCT      1.139             6          6
+dotp:        YNT        GST      0.939             6          4
+dotp:        YNT       HTDE      1.215             6          6
+dotp:        YNT        MIN      1.456             6          6
+dotp:        YNT        BMX      1.329             6          6
+dotp:        YNT        LWH      1.426             6          6
+dotp:        YNT        DRC      1.830             6          4
+dotp:        YNT       HAMS      1.767             6          1
+dotp:        YNT         BP      0.000             6          0
+dotp:        YNT        AWB      1.562             6          1
+dotp:        YNT        JQH      1.245             6          1
+dotp:        YNT         LR      1.584             6          5
+dotp:        YNT         LW      1.647             6          6
+dotp:        YNT         MS      1.841             6          4
+dotp:        YNT         PT      1.866             6          5
+dotp:        YNT        JWB      2.166             6          1
+dotp:        YNT        WWB      1.855             6          6
+dotp:        YNT      Xiang      1.918             6          1
+dotp:        SCT        SCT      1.024             6          6
+dotp:        SCT        GST      0.895             6          4
+dotp:        SCT       HTDE      1.365             6          6
+dotp:        SCT        MIN      1.460             6          6
+dotp:        SCT        BMX      1.436             6          6
+dotp:        SCT        LWH      1.489             6          6
+dotp:        SCT        DRC      1.836             6          4
+dotp:        SCT       HAMS      1.770             6          1
+dotp:        SCT         BP      0.000             6          0
+dotp:        SCT        AWB      1.655             6          1
+dotp:        SCT        JQH      1.252             6          1
+dotp:        SCT         LR      1.589             6          5
+dotp:        SCT         LW      1.670             6          6
+dotp:        SCT         MS      1.833             6          4
+dotp:        SCT         PT      1.905             6          5
+dotp:        SCT        JWB      2.201             6          1
+dotp:        SCT        WWB      1.897             6          6
+dotp:        SCT      Xiang      1.937             6          1
+dotp:        GST        GST      0.898             4          4
+dotp:        GST       HTDE      1.209             4          6
+dotp:        GST        MIN      1.376             4          6
+dotp:        GST        BMX      1.309             4          6
+dotp:        GST        LWH      1.327             4          6
+dotp:        GST        DRC      1.790             4          4
+dotp:        GST       HAMS      1.704             4          1
+dotp:        GST         BP      0.000             4          0
+dotp:        GST        AWB      1.548             4          1
+dotp:        GST        JQH      1.149             4          1
+dotp:        GST         LR      1.516             4          5
+dotp:        GST         LW      1.565             4          6
+dotp:        GST         MS      1.716             4          4
+dotp:        GST         PT      1.821             4          5
+dotp:        GST        JWB      2.099             4          1
+dotp:        GST        WWB      1.804             4          6
+dotp:        GST      Xiang      1.803             4          1
+dotp:       HTDE       HTDE      1.375             6          6
+dotp:       HTDE        MIN      1.505             6          6
+dotp:       HTDE        BMX      1.465             6          6
+dotp:       HTDE        LWH      1.586             6          6
+dotp:       HTDE        DRC      1.767             6          4
+dotp:       HTDE       HAMS      1.627             6          1
+dotp:       HTDE         BP      0.000             6          0
+dotp:       HTDE        AWB      1.741             6          1
+dotp:       HTDE        JQH      1.390             6          1
+dotp:       HTDE         LR      1.564             6          5
+dotp:       HTDE         LW      1.583             6          6
+dotp:       HTDE         MS      2.036             6          4
+dotp:       HTDE         PT      1.908             6          5
+dotp:       HTDE        JWB      2.064             6          1
+dotp:       HTDE        WWB      1.789             6          6
+dotp:       HTDE      Xiang      2.278             6          1
+dotp:        MIN        MIN      1.238             6          6
+dotp:        MIN        BMX      1.413             6          6
+dotp:        MIN        LWH      1.496             6          6
+dotp:        MIN        DRC      1.500             6          4
+dotp:        MIN       HAMS      1.410             6          1
+dotp:        MIN         BP      0.000             6          0
+dotp:        MIN        AWB      1.724             6          1
+dotp:        MIN        JQH      1.270             6          1
+dotp:        MIN         LR      1.345             6          5
+dotp:        MIN         LW      1.379             6          6
+dotp:        MIN         MS      1.781             6          4
+dotp:        MIN         PT      1.594             6          5
+dotp:        MIN        JWB      1.955             6          1
+dotp:        MIN        WWB      1.580             6          6
+dotp:        MIN      Xiang      2.046             6          1
+dotp:        BMX        BMX      1.416             6          6
+dotp:        BMX        LWH      1.568             6          6
+dotp:        BMX        DRC      1.644             6          4
+dotp:        BMX       HAMS      1.592             6          1
+dotp:        BMX         BP      0.000             6          0
+dotp:        BMX        AWB      1.953             6          1
+dotp:        BMX        JQH      1.318             6          1
+dotp:        BMX         LR      1.446             6          5
+dotp:        BMX         LW      1.430             6          6
+dotp:        BMX         MS      1.826             6          4
+dotp:        BMX         PT      1.633             6          5
+dotp:        BMX        JWB      2.078             6          1
+dotp:        BMX        WWB      1.746             6          6
+dotp:        BMX      Xiang      2.209             6          1
+dotp:        LWH        LWH      1.312             6          6
+dotp:        LWH        DRC      1.773             6          4
+dotp:        LWH       HAMS      1.627             6          1
+dotp:        LWH         BP      0.000             6          0
+dotp:        LWH        AWB      1.541             6          1
+dotp:        LWH        JQH      1.144             6          1
+dotp:        LWH         LR      1.439             6          5
+dotp:        LWH         LW      1.592             6          6
+dotp:        LWH         MS      1.610             6          4
+dotp:        LWH         PT      1.901             6          5
+dotp:        LWH        JWB      2.163             6          1
+dotp:        LWH        WWB      1.738             6          6
+dotp:        LWH      Xiang      2.050             6          1
+dotp:        DRC        DRC      1.661             4          4
+dotp:        DRC       HAMS      1.129             4          1
+dotp:        DRC         BP      0.000             4          0
+dotp:        DRC        AWB      2.198             4          1
+dotp:        DRC        JQH      1.301             4          1
+dotp:        DRC         LR      1.301             4          5
+dotp:        DRC         LW      1.407             4          6
+dotp:        DRC         MS      2.068             4          4
+dotp:        DRC         PT      1.638             4          5
+dotp:        DRC        JWB      1.892             4          1
+dotp:        DRC        WWB      1.486             4          6
+dotp:        DRC      Xiang      2.584             4          1
+dotp:       HAMS       HAMS      0.000             1          1
+dotp:       HAMS         BP      0.000             1          0
+dotp:       HAMS        AWB      2.177             1          1
+dotp:       HAMS        JQH      1.152             1          1
+dotp:       HAMS         LR      1.144             1          5
+dotp:       HAMS         LW      1.250             1          6
+dotp:       HAMS         MS      2.001             1          4
+dotp:       HAMS         PT      1.532             1          5
+dotp:       HAMS        JWB      1.883             1          1
+dotp:       HAMS        WWB      1.210             1          6
+dotp:       HAMS      Xiang      2.560             1          1
+dotp:         BP         BP      0.000             0          0
+dotp:         BP        AWB      0.000             0          1
+dotp:         BP        JQH      0.000             0          1
+dotp:         BP         LR      0.000             0          5
+dotp:         BP         LW      0.000             0          6
+dotp:         BP         MS      0.000             0          4
+dotp:         BP         PT      0.000             0          5
+dotp:         BP        JWB      0.000             0          1
+dotp:         BP        WWB      0.000             0          6
+dotp:         BP      Xiang      0.000             0          1
+dotp:        AWB        AWB      0.000             1          1
+dotp:        AWB        JQH      1.769             1          1
+dotp:        AWB         LR      2.059             1          5
+dotp:        AWB         LW      2.128             1          6
+dotp:        AWB         MS      1.676             1          4
+dotp:        AWB         PT      2.301             1          5
+dotp:        AWB        JWB      2.616             1          1
+dotp:        AWB        WWB      2.219             1          6
+dotp:        AWB      Xiang      2.479             1          1
+dotp:        JQH        JQH      0.000             1          1
+dotp:        JQH         LR      0.713             1          5
+dotp:        JQH         LW      1.078             1          6
+dotp:        JQH         MS      1.714             1          4
+dotp:        JQH         PT      1.516             1          5
+dotp:        JQH        JWB      1.816             1          1
+dotp:        JQH        WWB      1.304             1          6
+dotp:        JQH      Xiang      1.556             1          1
+dotp:         LR         LR      0.996             5          5
+dotp:         LR         LW      1.092             5          6
+dotp:         LR         MS      1.882             5          4
+dotp:         LR         PT      1.512             5          5
+dotp:         LR        JWB      1.874             5          1
+dotp:         LR        WWB      1.304             5          6
+dotp:         LR      Xiang      2.151             5          1
+dotp:         LW         LW      1.312             6          6
+dotp:         LW         MS      1.891             6          4
+dotp:         LW         PT      1.488             6          5
+dotp:         LW        JWB      2.048             6          1
+dotp:         LW        WWB      1.487             6          6
+dotp:         LW      Xiang      2.357             6          1
+dotp:         MS         MS      1.895             4          4
+dotp:         MS         PT      2.027             4          5
+dotp:         MS        JWB      2.547             4          1
+dotp:         MS        WWB      2.153             4          6
+dotp:         MS      Xiang      2.416             4          1
+dotp:         PT         PT      1.777             5          5
+dotp:         PT        JWB      2.329             5          1
+dotp:         PT        WWB      1.827             5          6
+dotp:         PT      Xiang      2.368             5          1
+dotp:        JWB        JWB      0.000             1          1
+dotp:        JWB        WWB      1.738             1          6
+dotp:        JWB      Xiang      2.873             1          1
+dotp:        WWB        WWB      1.615             6          6
+dotp:        WWB      Xiang      2.599             6          1
+dotp:      Xiang      Xiang      0.000             1          1
+
+
+number of blocks for moving block jackknife: 1
+s.dev * 1000000:
+          W     E     C     L     T     Y     S     G     H     M     B     L     D     H     B     A     J     L     L     M     P     J     W     X 
+   W      0     0     0     0     0     0     0     0     0     0     0     0     0     0     0     0     0     0     0     0     0     0     0     0
+   E      0     0     0     0     0     0     0     0     0     0     0     0     0     0     0     0     0     0     0     0     0     0     0     0
+   C      0     0     0     0     0     0     0     0     0     0     0     0     0     0     0     0     0     0     0     0     0     0     0     0
+   L      0     0     0     0     0     0     0     0     0     0     0     0     0     0     0     0     0     0     0     0     0     0     0     0
+   T      0     0     0     0     0     0     0     0     0     0     0     0     0     0     0     0     0     0     0     0     0     0     0     0
+   Y      0     0     0     0     0     0     0     0     0     0     0     0     0     0     0     0     0     0     0     0     0     0     0     0
+   S      0     0     0     0     0     0     0     0     0     0     0     0     0     0     0     0     0     0     0     0     0     0     0     0
+   G      0     0     0     0     0     0     0     0     0     0     0     0     0     0     0     0     0     0     0     0     0     0     0     0
+   H      0     0     0     0     0     0     0     0     0     0     0     0     0     0     0     0     0     0     0     0     0     0     0     0
+   M      0     0     0     0     0     0     0     0     0     0     0     0     0     0     0     0     0     0     0     0     0     0     0     0
+   B      0     0     0     0     0     0     0     0     0     0     0     0     0     0     0     0     0     0     0     0     0     0     0     0
+   L      0     0     0     0     0     0     0     0     0     0     0     0     0     0     0     0     0     0     0     0     0     0     0     0
+   D      0     0     0     0     0     0     0     0     0     0     0     0     0     0     0     0     0     0     0     0     0     0     0     0
+   H      0     0     0     0     0     0     0     0     0     0     0     0     0     0     0     0     0     0     0     0     0     0     0     0
+   B      0     0     0     0     0     0     0     0     0     0     0     0     0     0     0     0     0     0     0     0     0     0     0     0
+   A      0     0     0     0     0     0     0     0     0     0     0     0     0     0     0     0     0     0     0     0     0     0     0     0
+   J      0     0     0     0     0     0     0     0     0     0     0     0     0     0     0     0     0     0     0     0     0     0     0     0
+   L      0     0     0     0     0     0     0     0     0     0     0     0     0     0     0     0     0     0     0     0     0     0     0     0
+   L      0     0     0     0     0     0     0     0     0     0     0     0     0     0     0     0     0     0     0     0     0     0     0     0
+   M      0     0     0     0     0     0     0     0     0     0     0     0     0     0     0     0     0     0     0     0     0     0     0     0
+   P      0     0     0     0     0     0     0     0     0     0     0     0     0     0     0     0     0     0     0     0     0     0     0     0
+   J      0     0     0     0     0     0     0     0     0     0     0     0     0     0     0     0     0     0     0     0     0     0     0     0
+   W      0     0     0     0     0     0     0     0     0     0     0     0     0     0     0     0     0     0     0     0     0     0     0     0
+   X      0     0     0     0     0     0     0     0     0     0     0     0     0     0     0     0     0     0     0     0     0     0     0     0
+
+eigenvector 1:means
+                 AWB     -0.088
+                 GST     -0.081
+                 YNT     -0.073
+                 SCT     -0.070
+               Xiang     -0.070
+                 WZS     -0.060
+                  TT     -0.056
+                 CWB     -0.055
+                  MS     -0.041
+                 LUC     -0.023
+                 EHL     -0.022
+                HTDE     -0.016
+                 LWH     -0.013
+                 BMX     -0.005
+                  BP      0.000
+                 MIN      0.030
+                  PT      0.061
+                 JQH      0.076
+                 JWB      0.092
+                  LW      0.099
+                 DRC      0.113
+                 WWB      0.121
+                  LR      0.126
+                HAMS      0.145
+## Anova statistics for population differences along each eigenvector:
+                                              p-value
+                  eigenvector_1_overall_   1.60978e-06 ***
+                  AWB minv:    -0.088                 HAMS maxv:     0.145
+                  eigenvector_1_WZS_EHL_      0.199531 
+                  eigenvector_1_WZS_CWB_      0.677275 
+                  eigenvector_1_WZS_LUC_     0.0424979 
+                   eigenvector_1_WZS_TT_       0.78812 
+                  eigenvector_1_WZS_YNT_      0.233367 
+                  eigenvector_1_WZS_SCT_      0.481235 
+                  eigenvector_1_WZS_GST_      0.135681 
+                 eigenvector_1_WZS_HTDE_        0.3971 
+                  eigenvector_1_WZS_MIN_     0.0226774 
+                  eigenvector_1_WZS_BMX_      0.254481 
+                  eigenvector_1_WZS_LWH_      0.199741 
+                  eigenvector_1_WZS_DRC_    0.00187433 
+                   eigenvector_1_WZS_LR_    0.00282257 
+                   eigenvector_1_WZS_LW_     0.0132432 
+                   eigenvector_1_WZS_MS_       0.55961 
+                   eigenvector_1_WZS_PT_    0.00944513 
+                  eigenvector_1_WZS_WWB_    0.00137338 
+                  eigenvector_1_EHL_CWB_      0.163436 
+                  eigenvector_1_EHL_LUC_      0.967376 
+                   eigenvector_1_EHL_TT_      0.242112 
+                  eigenvector_1_EHL_YNT_     0.0734832 
+                  eigenvector_1_EHL_SCT_      0.109427 
+                  eigenvector_1_EHL_GST_      0.103629 
+                 eigenvector_1_EHL_HTDE_      0.916854 
+                  eigenvector_1_EHL_MIN_      0.260088 
+                  eigenvector_1_EHL_BMX_      0.758937 
+                  eigenvector_1_EHL_LWH_      0.840242 
+                  eigenvector_1_EHL_DRC_     0.0323205 
+                   eigenvector_1_EHL_LR_     0.0305261 
+                   eigenvector_1_EHL_LW_     0.0857093 
+                   eigenvector_1_EHL_MS_      0.689686 
+                   eigenvector_1_EHL_PT_      0.120788 
+                  eigenvector_1_EHL_WWB_     0.0202211 
+                  eigenvector_1_CWB_LUC_     0.0401427 
+                   eigenvector_1_CWB_TT_      0.901166 
+                  eigenvector_1_CWB_YNT_     0.0975141 
+                  eigenvector_1_CWB_SCT_      0.235828 
+                  eigenvector_1_CWB_GST_     0.0610161 
+                 eigenvector_1_CWB_HTDE_      0.329569 
+                  eigenvector_1_CWB_MIN_    0.00612622 
+                  eigenvector_1_CWB_BMX_      0.179051 
+                  eigenvector_1_CWB_LWH_      0.143052 
+                  eigenvector_1_CWB_DRC_   0.000109412 ***
+                   eigenvector_1_CWB_LR_    0.00019756 ***
+                   eigenvector_1_CWB_LW_    0.00202478 
+                   eigenvector_1_CWB_MS_      0.593831 
+                   eigenvector_1_CWB_PT_    0.00146322 
+                  eigenvector_1_CWB_WWB_   7.98231e-05 ***
+                   eigenvector_1_LUC_TT_     0.0608563 
+                  eigenvector_1_LUC_YNT_    0.00279611 
+                  eigenvector_1_LUC_SCT_     0.0109407 
+                  eigenvector_1_LUC_GST_    0.00582671 
+                 eigenvector_1_LUC_HTDE_      0.883355 
+                  eigenvector_1_LUC_MIN_      0.150525 
+                  eigenvector_1_LUC_BMX_      0.694768 
+                  eigenvector_1_LUC_LWH_      0.773672 
+                  eigenvector_1_LUC_DRC_    0.00814166 
+                   eigenvector_1_LUC_LR_     0.0105502 
+                   eigenvector_1_LUC_LW_      0.045126 
+                   eigenvector_1_LUC_MS_      0.606839 
+                   eigenvector_1_LUC_PT_     0.0521047 
+                  eigenvector_1_LUC_WWB_    0.00627057 
+                   eigenvector_1_TT_YNT_      0.123124 
+                   eigenvector_1_TT_SCT_      0.319675 
+                   eigenvector_1_TT_GST_     0.0770304 
+                  eigenvector_1_TT_HTDE_      0.437119 
+                   eigenvector_1_TT_MIN_     0.0272193 
+                   eigenvector_1_TT_BMX_      0.285896 
+                   eigenvector_1_TT_LWH_      0.234508 
+                   eigenvector_1_TT_DRC_    0.00209217 
+                    eigenvector_1_TT_LR_    0.00316133 
+                    eigenvector_1_TT_LW_     0.0148963 
+                    eigenvector_1_TT_MS_      0.637334 
+                    eigenvector_1_TT_PT_     0.0109765 
+                   eigenvector_1_TT_WWB_    0.00156544 
+                  eigenvector_1_YNT_SCT_      0.677614 
+                  eigenvector_1_YNT_GST_      0.178481 
+                 eigenvector_1_YNT_HTDE_      0.267684 
+                  eigenvector_1_YNT_MIN_    0.00914904 
+                  eigenvector_1_YNT_BMX_      0.155944 
+                  eigenvector_1_YNT_LWH_     0.0963728 
+                  eigenvector_1_YNT_DRC_   0.000874693 ***
+                   eigenvector_1_YNT_LR_    0.00154713 
+                   eigenvector_1_YNT_LW_    0.00785969 
+                   eigenvector_1_YNT_MS_      0.297291 
+                   eigenvector_1_YNT_PT_    0.00418865 
+                  eigenvector_1_YNT_WWB_   0.000690853 ***
+                  eigenvector_1_SCT_GST_      0.313582 
+                 eigenvector_1_SCT_HTDE_      0.304837 
+                  eigenvector_1_SCT_MIN_      0.012979 
+                  eigenvector_1_SCT_BMX_       0.18403 
+                  eigenvector_1_SCT_LWH_      0.125344 
+                  eigenvector_1_SCT_DRC_    0.00122804 
+                   eigenvector_1_SCT_LR_    0.00196185 
+                   eigenvector_1_SCT_LW_    0.00945712 
+                   eigenvector_1_SCT_MS_      0.377928 
+                   eigenvector_1_SCT_PT_    0.00581042 
+                  eigenvector_1_SCT_WWB_   0.000905009 ***
+                 eigenvector_1_GST_HTDE_      0.317026 
+                  eigenvector_1_GST_MIN_     0.0238561 
+                  eigenvector_1_GST_BMX_      0.208275 
+                  eigenvector_1_GST_LWH_      0.134929 
+                  eigenvector_1_GST_DRC_    0.00532134 
+                   eigenvector_1_GST_LR_    0.00756717 
+                   eigenvector_1_GST_LW_     0.0241857 
+                   eigenvector_1_GST_MS_      0.313808 
+                   eigenvector_1_GST_PT_     0.0147276 
+                  eigenvector_1_GST_WWB_    0.00379609 
+                 eigenvector_1_HTDE_MIN_       0.45457 
+                 eigenvector_1_HTDE_BMX_      0.870289 
+                 eigenvector_1_HTDE_LWH_      0.964128 
+                 eigenvector_1_HTDE_DRC_      0.107037 
+                  eigenvector_1_HTDE_LR_     0.0739602 
+                  eigenvector_1_HTDE_LW_      0.140575 
+                  eigenvector_1_HTDE_MS_      0.720576 
+                  eigenvector_1_HTDE_PT_      0.267072 
+                 eigenvector_1_HTDE_WWB_     0.0559432 
+                  eigenvector_1_MIN_BMX_      0.545256 
+                  eigenvector_1_MIN_LWH_      0.371033 
+                  eigenvector_1_MIN_DRC_      0.158069 
+                   eigenvector_1_MIN_LR_      0.123878 
+                   eigenvector_1_MIN_LW_      0.285079 
+                   eigenvector_1_MIN_MS_      0.189045 
+                   eigenvector_1_MIN_PT_      0.549482 
+                  eigenvector_1_MIN_WWB_      0.104374 
+                  eigenvector_1_BMX_LWH_      0.882546 
+                  eigenvector_1_BMX_DRC_      0.114057 
+                   eigenvector_1_BMX_LR_     0.0810717 
+                   eigenvector_1_BMX_LW_      0.163036 
+                   eigenvector_1_BMX_MS_      0.580586 
+                   eigenvector_1_BMX_PT_      0.309549 
+                  eigenvector_1_BMX_WWB_     0.0626233 
+                  eigenvector_1_LWH_DRC_     0.0490895 
+                   eigenvector_1_LWH_LR_     0.0382675 
+                   eigenvector_1_LWH_LW_     0.0989632 
+                   eigenvector_1_LWH_MS_      0.593703 
+                   eigenvector_1_LWH_PT_      0.177698 
+                  eigenvector_1_LWH_WWB_     0.0268478 
+                   eigenvector_1_DRC_LR_      0.859452 
+                   eigenvector_1_DRC_LW_      0.845549 
+                   eigenvector_1_DRC_MS_     0.0385304 
+                   eigenvector_1_DRC_PT_      0.405037 
+                  eigenvector_1_DRC_WWB_      0.900364 
+                    eigenvector_1_LR_LW_      0.712948 
+                    eigenvector_1_LR_MS_     0.0358626 
+                    eigenvector_1_LR_PT_      0.327838 
+                   eigenvector_1_LR_WWB_      0.942897 
+                    eigenvector_1_LW_MS_     0.0850397 
+                    eigenvector_1_LW_PT_      0.587266 
+                   eigenvector_1_LW_WWB_      0.734149 
+                    eigenvector_1_MS_PT_      0.104714 
+                   eigenvector_1_MS_WWB_     0.0232191 
+                   eigenvector_1_PT_WWB_      0.311332 
+eigenvector 2:means
+                 AWB     -0.140
+                 EHL     -0.119
+                  MS     -0.119
+                 LWH     -0.101
+                 WZS     -0.055
+                 LUC     -0.035
+                 WWB     -0.016
+                 CWB     -0.015
+                 JQH     -0.002
+                  BP      0.000
+                  LR      0.003
+                HAMS      0.004
+                 JWB      0.004
+               Xiang      0.007
+                 MIN      0.012
+                 DRC      0.023
+                  LW      0.036
+                 GST      0.041
+                 SCT      0.042
+                  PT      0.053
+                 YNT      0.054
+                HTDE      0.060
+                 BMX      0.062
+                  TT      0.076
+                  eigenvector_2_overall_    0.00475892 
+                  AWB minv:    -0.140                   TT maxv:     0.076
+                  eigenvector_2_WZS_EHL_      0.493594 
+                  eigenvector_2_WZS_CWB_      0.431568 
+                  eigenvector_2_WZS_LUC_      0.769436 
+                   eigenvector_2_WZS_TT_     0.0544776 
+                  eigenvector_2_WZS_YNT_      0.100019 
+                  eigenvector_2_WZS_SCT_      0.138163 
+                  eigenvector_2_WZS_GST_       0.24366 
+                 eigenvector_2_WZS_HTDE_      0.100198 
+                  eigenvector_2_WZS_MIN_      0.303501 
+                  eigenvector_2_WZS_BMX_      0.100336 
+                  eigenvector_2_WZS_LWH_      0.574951 
+                  eigenvector_2_WZS_DRC_      0.340394 
+                   eigenvector_2_WZS_LR_      0.410081 
+                   eigenvector_2_WZS_LW_      0.197386 
+                   eigenvector_2_WZS_MS_      0.609782 
+                   eigenvector_2_WZS_PT_      0.147675 
+                  eigenvector_2_WZS_WWB_      0.539156 
+                  eigenvector_2_EHL_CWB_     0.0668916 
+                  eigenvector_2_EHL_LUC_      0.257819 
+                   eigenvector_2_EHL_TT_     0.0126683 
+                  eigenvector_2_EHL_YNT_     0.0225315 
+                  eigenvector_2_EHL_SCT_     0.0304545 
+                  eigenvector_2_EHL_GST_     0.0863376 
+                 eigenvector_2_EHL_HTDE_     0.0253385 
+                  eigenvector_2_EHL_MIN_     0.0725109 
+                  eigenvector_2_EHL_BMX_     0.0259423 
+                  eigenvector_2_EHL_LWH_      0.843487 
+                  eigenvector_2_EHL_DRC_      0.122703 
+                   eigenvector_2_EHL_LR_      0.122057 
+                   eigenvector_2_EHL_LW_     0.0530349 
+                   eigenvector_2_EHL_MS_             1 
+                   eigenvector_2_EHL_PT_     0.0429717 
+                  eigenvector_2_EHL_WWB_      0.141967 
+                  eigenvector_2_CWB_LUC_      0.515759 
+                   eigenvector_2_CWB_TT_    0.00128868 
+                  eigenvector_2_CWB_YNT_    0.00941188 
+                  eigenvector_2_CWB_SCT_     0.0248154 
+                  eigenvector_2_CWB_GST_     0.0852377 
+                 eigenvector_2_CWB_HTDE_     0.0169712 
+                  eigenvector_2_CWB_MIN_      0.301425 
+                  eigenvector_2_CWB_BMX_     0.0185146 
+                  eigenvector_2_CWB_LWH_     0.0830636 
+                  eigenvector_2_CWB_DRC_      0.241294 
+                   eigenvector_2_CWB_LR_       0.50807 
+                   eigenvector_2_CWB_LW_      0.119616 
+                   eigenvector_2_CWB_MS_      0.196386 
+                   eigenvector_2_CWB_PT_     0.0280693 
+                  eigenvector_2_CWB_WWB_      0.954617 
+                   eigenvector_2_LUC_TT_    0.00433963 
+                  eigenvector_2_LUC_YNT_     0.0156096 
+                  eigenvector_2_LUC_SCT_     0.0286643 
+                  eigenvector_2_LUC_GST_     0.0946271 
+                 eigenvector_2_LUC_HTDE_     0.0273856 
+                  eigenvector_2_LUC_MIN_      0.184351 
+                  eigenvector_2_LUC_BMX_     0.0298266 
+                  eigenvector_2_LUC_LWH_      0.306792 
+                  eigenvector_2_LUC_DRC_      0.196929 
+                   eigenvector_2_LUC_LR_      0.308415 
+                   eigenvector_2_LUC_LW_       0.11218 
+                   eigenvector_2_LUC_MS_      0.434568 
+                   eigenvector_2_LUC_PT_     0.0402194 
+                  eigenvector_2_LUC_WWB_      0.570323 
+                   eigenvector_2_TT_YNT_       0.15531 
+                   eigenvector_2_TT_SCT_     0.0198365 
+                   eigenvector_2_TT_GST_      0.136455 
+                  eigenvector_2_TT_HTDE_      0.553042 
+                   eigenvector_2_TT_MIN_    0.00493225 
+                   eigenvector_2_TT_BMX_      0.610087 
+                   eigenvector_2_TT_LWH_    0.00955775 
+                   eigenvector_2_TT_DRC_     0.0502083 
+                    eigenvector_2_TT_LR_    0.00380933 
+                    eigenvector_2_TT_LW_      0.225921 
+                    eigenvector_2_TT_MS_     0.0779244 
+                    eigenvector_2_TT_PT_      0.300582 
+                   eigenvector_2_TT_WWB_     0.0003428 ***
+                  eigenvector_2_YNT_SCT_      0.370451 
+                  eigenvector_2_YNT_GST_      0.564519 
+                 eigenvector_2_YNT_HTDE_      0.814298 
+                  eigenvector_2_YNT_MIN_     0.0456031 
+                  eigenvector_2_YNT_BMX_      0.791635 
+                  eigenvector_2_YNT_LWH_     0.0189315 
+                  eigenvector_2_YNT_DRC_      0.226741 
+                   eigenvector_2_YNT_LR_     0.0294471 
+                   eigenvector_2_YNT_LW_      0.575779 
+                   eigenvector_2_YNT_MS_      0.110526 
+                   eigenvector_2_YNT_PT_       0.94988 
+                  eigenvector_2_YNT_WWB_    0.00308976 
+                  eigenvector_2_SCT_GST_      0.977443 
+                 eigenvector_2_SCT_HTDE_      0.462791 
+                  eigenvector_2_SCT_MIN_      0.117517 
+                  eigenvector_2_SCT_BMX_      0.465537 
+                  eigenvector_2_SCT_LWH_     0.0271193 
+                  eigenvector_2_SCT_DRC_      0.430615 
+                   eigenvector_2_SCT_LR_      0.066506 
+                   eigenvector_2_SCT_LW_      0.865655 
+                   eigenvector_2_SCT_MS_      0.133652 
+                   eigenvector_2_SCT_PT_      0.594709 
+                  eigenvector_2_SCT_WWB_    0.00672896 
+                 eigenvector_2_GST_HTDE_      0.582902 
+                  eigenvector_2_GST_MIN_       0.29262 
+                  eigenvector_2_GST_BMX_      0.581641 
+                  eigenvector_2_GST_LWH_     0.0782686 
+                  eigenvector_2_GST_DRC_       0.61064 
+                   eigenvector_2_GST_LR_      0.219632 
+                   eigenvector_2_GST_LW_      0.911115 
+                   eigenvector_2_GST_MS_      0.241141 
+                   eigenvector_2_GST_PT_      0.705498 
+                  eigenvector_2_GST_WWB_      0.055732 
+                 eigenvector_2_HTDE_MIN_      0.109857 
+                 eigenvector_2_HTDE_BMX_      0.971737 
+                 eigenvector_2_HTDE_LWH_     0.0213497 
+                 eigenvector_2_HTDE_DRC_      0.317497 
+                  eigenvector_2_HTDE_LR_     0.0907495 
+                  eigenvector_2_HTDE_LW_      0.532318 
+                  eigenvector_2_HTDE_MS_      0.110372 
+                  eigenvector_2_HTDE_PT_      0.815656 
+                 eigenvector_2_HTDE_WWB_     0.0193393 
+                  eigenvector_2_MIN_BMX_      0.119679 
+                  eigenvector_2_MIN_LWH_     0.0745572 
+                  eigenvector_2_MIN_DRC_      0.693026 
+                   eigenvector_2_MIN_LR_      0.732419 
+                   eigenvector_2_MIN_LW_      0.469588 
+                   eigenvector_2_MIN_MS_      0.217505 
+                   eigenvector_2_MIN_PT_      0.132187 
+                  eigenvector_2_MIN_WWB_      0.224381 
+                  eigenvector_2_BMX_LWH_     0.0218697 
+                  eigenvector_2_BMX_DRC_      0.327549 
+                   eigenvector_2_BMX_LR_      0.101152 
+                   eigenvector_2_BMX_LW_      0.524941 
+                   eigenvector_2_BMX_MS_      0.110436 
+                   eigenvector_2_BMX_PT_      0.797024 
+                  eigenvector_2_BMX_WWB_     0.0234486 
+                  eigenvector_2_LWH_DRC_      0.118692 
+                   eigenvector_2_LWH_LR_      0.127528 
+                   eigenvector_2_LWH_LW_     0.0502721 
+                   eigenvector_2_LWH_MS_      0.885324 
+                   eigenvector_2_LWH_PT_     0.0370962 
+                  eigenvector_2_LWH_WWB_      0.161955 
+                   eigenvector_2_DRC_LR_      0.532187 
+                   eigenvector_2_DRC_LW_      0.754727 
+                   eigenvector_2_DRC_MS_      0.294486 
+                   eigenvector_2_DRC_PT_      0.378325 
+                  eigenvector_2_DRC_WWB_      0.189047 
+                    eigenvector_2_LR_LW_      0.382106 
+                    eigenvector_2_LR_MS_      0.294783 
+                    eigenvector_2_LR_PT_      0.101187 
+                   eigenvector_2_LR_WWB_      0.414717 
+                    eigenvector_2_LW_MS_      0.167492 
+                    eigenvector_2_LW_PT_      0.665605 
+                   eigenvector_2_LW_WWB_      0.139677 
+                    eigenvector_2_MS_PT_      0.157883 
+                   eigenvector_2_MS_WWB_      0.321052 
+                   eigenvector_2_PT_WWB_     0.0200502 
+
+## Statistical significance of differences beween populations:
+                                pop1                  pop2      chisq          p-value   |pop1|   |pop2|
+popdifference:                   WZS                   EHL         2.730      0.255439       6       5
+popdifference:                   WZS                   CWB         0.938      0.625725       6      10
+popdifference:                   WZS                   LUC         5.290     0.0710146       6       6
+popdifference:                   WZS                    TT         4.748     0.0931077       6       6
+popdifference:                   WZS                   YNT         5.199     0.0743265       6       6
+popdifference:                   WZS                   SCT         3.396      0.183067       6       6
+popdifference:                   WZS                   GST         4.764     0.0923809       6       4
+popdifference:                   WZS                  HTDE         4.309      0.115966       6       6
+popdifference:                   WZS                   MIN         7.870      0.019545       6       6
+popdifference:                   WZS                   BMX         5.039     0.0805032       6       6
+popdifference:                   WZS                   LWH         2.469      0.290955       6       6
+popdifference:                   WZS                   DRC        13.984   0.000919228       6       4
+popdifference:                   WZS                  HAMS         0.000             1       6       1
+popdifference:                   WZS                    BP         0.000             1       6       0
+popdifference:                   WZS                   AWB         0.000             1       6       1
+popdifference:                   WZS                   JQH         0.000             1       6       1
+popdifference:                   WZS                    LR        12.341    0.00208999       6       5
+popdifference:                   WZS                    LW         9.813    0.00739681       6       6
+popdifference:                   WZS                    MS         0.799       0.67058       6       4
+popdifference:                   WZS                    PT        11.375     0.0033882       6       5
+popdifference:                   WZS                   JWB         0.000             1       6       1
+popdifference:                   WZS                   WWB        13.335    0.00127161       6       6
+popdifference:                   WZS                 Xiang         0.000             1       6       1
+popdifference:                   EHL                   CWB         6.350     0.0417948       5      10
+popdifference:                   EHL                   LUC         1.655       0.43711       5       6
+popdifference:                   EHL                    TT         9.767    0.00756983       5       6
+popdifference:                   EHL                   YNT        10.835    0.00443897       5       6
+popdifference:                   EHL                   SCT         9.340    0.00937137       5       6
+popdifference:                   EHL                   GST         7.697     0.0213129       5       4
+popdifference:                   EHL                  HTDE         6.456     0.0396342       5       6
+popdifference:                   EHL                   MIN         5.796     0.0551228       5       6
+popdifference:                   EHL                   BMX         6.511     0.0385546       5       6
+popdifference:                   EHL                   LWH         0.103      0.949873       5       6
+popdifference:                   EHL                   DRC         9.579    0.00831634       5       4
+popdifference:                   EHL                  HAMS         0.000             1       5       1
+popdifference:                   EHL                    BP         0.000             1       5       0
+popdifference:                   EHL                   AWB         0.000             1       5       1
+popdifference:                   EHL                   JQH         0.000             1       5       1
+popdifference:                   EHL                    LR         9.380    0.00918847       5       5
+popdifference:                   EHL                    LW         8.634     0.0133405       5       6
+popdifference:                   EHL                    MS         0.220      0.895804       5       4
+popdifference:                   EHL                    PT         8.631     0.0133621       5       5
+popdifference:                   EHL                   JWB         0.000             1       5       1
+popdifference:                   EHL                   WWB         9.728    0.00771863       5       6
+popdifference:                   EHL                 Xiang         0.000             1       5       1
+popdifference:                   CWB                   LUC         5.484     0.0644468      10       6
+popdifference:                   CWB                    TT        12.258     0.0021785      10       6
+popdifference:                   CWB                   YNT        11.224    0.00365382      10       6
+popdifference:                   CWB                   SCT         7.623     0.0221205      10       6
+popdifference:                   CWB                   GST         7.863     0.0196133      10       4
+popdifference:                   CWB                  HTDE         7.867     0.0195744      10       6
+popdifference:                   CWB                   MIN        10.147    0.00625944      10       6
+popdifference:                   CWB                   BMX         8.699     0.0129151      10       6
+popdifference:                   CWB                   LWH         6.094     0.0474925      10       6
+popdifference:                   CWB                   DRC        19.790   5.04331e-05      10       4
+popdifference:                   CWB                  HAMS         0.000             1      10       1
+popdifference:                   CWB                    BP         0.000             1      10       0
+popdifference:                   CWB                   AWB         0.000             1      10       1
+popdifference:                   CWB                   JQH         0.000             1      10       1
+popdifference:                   CWB                    LR        17.077    0.00019577      10       5
+popdifference:                   CWB                    LW        14.127   0.000855931      10       6
+popdifference:                   CWB                    MS         2.375      0.305016      10       4
+popdifference:                   CWB                    PT        17.884   0.000130781      10       5
+popdifference:                   CWB                   JWB         0.000             1      10       1
+popdifference:                   CWB                   WWB        18.372   0.000102476      10       6
+popdifference:                   CWB                 Xiang         0.000             1      10       1
+popdifference:                   LUC                    TT        14.651   0.000658632       6       6
+popdifference:                   LUC                   YNT        18.582   9.22531e-05       6       6
+popdifference:                   LUC                   SCT        14.170   0.000837641       6       6
+popdifference:                   LUC                   GST        13.770    0.00102311       6       4
+popdifference:                   LUC                  HTDE         6.152     0.0461413       6       6
+popdifference:                   LUC                   MIN         4.826     0.0895516       6       6
+popdifference:                   LUC                   BMX         6.134     0.0465506       6       6
+popdifference:                   LUC                   LWH         1.421      0.491359       6       6
+popdifference:                   LUC                   DRC        11.481    0.00321255       6       4
+popdifference:                   LUC                  HAMS         0.000             1       6       1
+popdifference:                   LUC                    BP         0.000             1       6       0
+popdifference:                   LUC                   AWB         0.000             1       6       1
+popdifference:                   LUC                   JQH         0.000             1       6       1
+popdifference:                   LUC                    LR         9.757    0.00760879       6       5
+popdifference:                   LUC                    LW         8.233     0.0162997       6       6
+popdifference:                   LUC                    MS         1.164      0.558727       6       4
+popdifference:                   LUC                    PT        10.287    0.00583634       6       5
+popdifference:                   LUC                   JWB         0.000             1       6       1
+popdifference:                   LUC                   WWB         9.798    0.00745233       6       6
+popdifference:                   LUC                 Xiang         0.000             1       6       1
+popdifference:                    TT                   YNT         5.540     0.0626571       6       6
+popdifference:                    TT                   SCT         8.077     0.0176281       6       6
+popdifference:                    TT                   GST         7.095     0.0287903       6       4
+popdifference:                    TT                  HTDE         1.205       0.54736       6       6
+popdifference:                    TT                   MIN        16.073   0.000323426       6       6
+popdifference:                    TT                   BMX         1.764      0.413993       6       6
+popdifference:                    TT                   LWH        10.227    0.00601491       6       6
+popdifference:                    TT                   DRC        17.598   0.000150902       6       4
+popdifference:                    TT                  HAMS         0.000             1       6       1
+popdifference:                    TT                    BP         0.000             1       6       0
+popdifference:                    TT                   AWB         0.000             1       6       1
+popdifference:                    TT                   JQH         0.000             1       6       1
+popdifference:                    TT                    LR        21.966   1.69861e-05       6       5
+popdifference:                    TT                    LW         9.307    0.00952837       6       6
+popdifference:                    TT                    MS         4.421      0.109658       6       4
+popdifference:                    TT                    PT         9.711     0.0077868       6       5
+popdifference:                    TT                   JWB         0.000             1       6       1
+popdifference:                    TT                   WWB        28.638   6.04359e-07       6       6
+popdifference:                    TT                 Xiang         0.000             1       6       1
+popdifference:                   YNT                   SCT         1.229      0.540785       6       6
+popdifference:                   YNT                   GST         2.847       0.24091       6       4
+popdifference:                   YNT                  HTDE         1.618      0.445197       6       6
+popdifference:                   YNT                   MIN        13.575    0.00112784       6       6
+popdifference:                   YNT                   BMX         2.625      0.269133       6       6
+popdifference:                   YNT                   LWH        10.413    0.00548015       6       6
+popdifference:                   YNT                   DRC        16.563   0.000253211       6       4
+popdifference:                   YNT                  HAMS         0.000             1       6       1
+popdifference:                   YNT                    BP         0.000             1       6       0
+popdifference:                   YNT                   AWB         0.000             1       6       1
+popdifference:                   YNT                   JQH         0.000             1       6       1
+popdifference:                   YNT                    LR        18.984   7.54593e-05       6       5
+popdifference:                   YNT                    LW         9.279    0.00966425       6       6
+popdifference:                   YNT                    MS         4.826     0.0895497       6       4
+popdifference:                   YNT                    PT        10.550    0.00511697       6       5
+popdifference:                   YNT                   JWB         0.000             1       6       1
+popdifference:                   YNT                   WWB        25.448   2.97896e-06       6       6
+popdifference:                   YNT                 Xiang         0.000             1       6       1
+popdifference:                   SCT                   GST         1.351       0.50887       6       4
+popdifference:                   SCT                  HTDE         2.007      0.366514       6       6
+popdifference:                   SCT                   MIN        10.851    0.00440316       6       6
+popdifference:                   SCT                   BMX         2.896      0.235047       6       6
+popdifference:                   SCT                   LWH         9.106     0.0105338       6       6
+popdifference:                   SCT                   DRC        14.624   0.000667639       6       4
+popdifference:                   SCT                  HAMS         0.000             1       6       1
+popdifference:                   SCT                    BP         0.000             1       6       0
+popdifference:                   SCT                   AWB         0.000             1       6       1
+popdifference:                   SCT                   JQH         0.000             1       6       1
+popdifference:                   SCT                    LR        16.659   0.000241343       6       5
+popdifference:                   SCT                    LW         8.505     0.0142274       6       6
+popdifference:                   SCT                    MS         4.022      0.133878       6       4
+popdifference:                   SCT                    PT        10.153    0.00624245       6       5
+popdifference:                   SCT                   JWB         0.000             1       6       1
+popdifference:                   SCT                   WWB        23.056   9.84909e-06       6       6
+popdifference:                   SCT                 Xiang         0.000             1       6       1
+popdifference:                   GST                  HTDE         1.732      0.420606       4       6
+popdifference:                   GST                   MIN         8.239     0.0162519       4       6
+popdifference:                   GST                   BMX         2.508      0.285374       4       6
+popdifference:                   GST                   LWH         7.084     0.0289545       4       6
+popdifference:                   GST                   DRC        11.515    0.00315934       4       4
+popdifference:                   GST                  HAMS         0.000             1       4       1
+popdifference:                   GST                    BP         0.000             1       4       0
+popdifference:                   GST                   AWB         0.000             1       4       1
+popdifference:                   GST                   JQH         0.000             1       4       1
+popdifference:                   GST                    LR        11.859    0.00265974       4       5
+popdifference:                   GST                    LW         6.752     0.0341843       4       6
+popdifference:                   GST                    MS         3.454      0.177777       4       4
+popdifference:                   GST                    PT         8.364     0.0152705       4       5
+popdifference:                   GST                   JWB         0.000             1       4       1
+popdifference:                   GST                   WWB        15.937   0.000346132       4       6
+popdifference:                   GST                 Xiang         0.000             1       4       1
+popdifference:                  HTDE                   MIN         3.926      0.140434       6       6
+popdifference:                  HTDE                   BMX         0.035      0.982545       6       6
+popdifference:                  HTDE                   LWH         6.670     0.0356228       6       6
+popdifference:                  HTDE                   DRC         4.778     0.0917431       6       4
+popdifference:                  HTDE                  HAMS         0.000             1       6       1
+popdifference:                  HTDE                    BP         0.000             1       6       0
+popdifference:                  HTDE                   AWB         0.000             1       6       1
+popdifference:                  HTDE                   JQH         0.000             1       6       1
+popdifference:                  HTDE                    LR         7.808     0.0201656       6       5
+popdifference:                  HTDE                    LW         3.228      0.199043       6       6
+popdifference:                  HTDE                    MS         3.555      0.169063       6       4
+popdifference:                  HTDE                    PT         1.660       0.43597       6       5
+popdifference:                  HTDE                   JWB         0.000             1       6       1
+popdifference:                  HTDE                   WWB        11.485      0.003207       6       6
+popdifference:                  HTDE                 Xiang         0.000             1       6       1
+popdifference:                   MIN                   BMX         3.513      0.172679       6       6
+popdifference:                   MIN                   LWH         5.014     0.0815048       6       6
+popdifference:                   MIN                   DRC         2.854      0.239978       6       4
+popdifference:                   MIN                  HAMS         0.000             1       6       1
+popdifference:                   MIN                    BP         0.000             1       6       0
+popdifference:                   MIN                   AWB         0.000             1       6       1
+popdifference:                   MIN                   JQH         0.000             1       6       1
+popdifference:                   MIN                    LR         3.206      0.201333       6       5
+popdifference:                   MIN                    LW         2.100      0.349904       6       6
+popdifference:                   MIN                    MS         4.313      0.115723       6       4
+popdifference:                   MIN                    PT         3.387      0.183855       6       5
+popdifference:                   MIN                   JWB         0.000             1       6       1
+popdifference:                   MIN                   WWB         5.184     0.0748839       6       6
+popdifference:                   MIN                 Xiang         0.000             1       6       1
+popdifference:                   BMX                   LWH         6.642     0.0361181       6       6
+popdifference:                   BMX                   DRC         4.590      0.100736       6       4
+popdifference:                   BMX                  HAMS         0.000             1       6       1
+popdifference:                   BMX                    BP         0.000             1       6       0
+popdifference:                   BMX                   AWB         0.000             1       6       1
+popdifference:                   BMX                   JQH         0.000             1       6       1
+popdifference:                   BMX                    LR         7.391     0.0248321       6       5
+popdifference:                   BMX                    LW         2.962      0.227401       6       6
+popdifference:                   BMX                    MS         3.790      0.150346       6       4
+popdifference:                   BMX                    PT         1.419      0.491966       6       5
+popdifference:                   BMX                   JWB         0.000             1       6       1
+popdifference:                   BMX                   WWB        10.828    0.00445359       6       6
+popdifference:                   BMX                 Xiang         0.000             1       6       1
+popdifference:                   LWH                   DRC         8.370     0.0152191       6       4
+popdifference:                   LWH                  HAMS         0.000             1       6       1
+popdifference:                   LWH                    BP         0.000             1       6       0
+popdifference:                   LWH                   AWB         0.000             1       6       1
+popdifference:                   LWH                   JQH         0.000             1       6       1
+popdifference:                   LWH                    LR         8.529     0.0140585       6       5
+popdifference:                   LWH                    LW         8.255     0.0161204       6       6
+popdifference:                   LWH                    MS         0.406      0.816187       6       4
+popdifference:                   LWH                    PT         7.945     0.0188221       6       5
+popdifference:                   LWH                   JWB         0.000             1       6       1
+popdifference:                   LWH                   WWB         8.633      0.013347       6       6
+popdifference:                   LWH                 Xiang         0.000             1       6       1
+popdifference:                   DRC                  HAMS         0.000             1       4       1
+popdifference:                   DRC                    BP         0.000             1       4       0
+popdifference:                   DRC                   AWB         0.000             1       4       1
+popdifference:                   DRC                   JQH         0.000             1       4       1
+popdifference:                   DRC                    LR         0.582      0.747589       4       5
+popdifference:                   DRC                    LW         0.180      0.913783       4       6
+popdifference:                   DRC                    MS         7.757     0.0206802       4       4
+popdifference:                   DRC                    PT         2.027      0.362898       4       5
+popdifference:                   DRC                   JWB         0.000             1       4       1
+popdifference:                   DRC                   WWB         2.313      0.314592       4       6
+popdifference:                   DRC                 Xiang         0.000             1       4       1
+popdifference:                  HAMS                    BP         0.000             1       1       0
+popdifference:                  HAMS                   AWB         0.000             1       1       1
+popdifference:                  HAMS                   JQH         0.000             1       1       1
+popdifference:                  HAMS                    LR         0.000             1       1       5
+popdifference:                  HAMS                    LW         0.000             1       1       6
+popdifference:                  HAMS                    MS         0.000             1       1       4
+popdifference:                  HAMS                    PT         0.000             1       1       5
+popdifference:                  HAMS                   JWB         0.000             1       1       1
+popdifference:                  HAMS                   WWB         0.000             1       1       6
+popdifference:                  HAMS                 Xiang         0.000             1       1       1
+popdifference:                    BP                   AWB         0.000             1       0       1
+popdifference:                    BP                   JQH         0.000             1       0       1
+popdifference:                    BP                    LR         0.000             1       0       5
+popdifference:                    BP                    LW         0.000             1       0       6
+popdifference:                    BP                    MS         0.000             1       0       4
+popdifference:                    BP                    PT         0.000             1       0       5
+popdifference:                    BP                   JWB         0.000             1       0       1
+popdifference:                    BP                   WWB         0.000             1       0       6
+popdifference:                    BP                 Xiang         0.000             1       0       1
+popdifference:                   AWB                   JQH         0.000             1       1       1
+popdifference:                   AWB                    LR         0.000             1       1       5
+popdifference:                   AWB                    LW         0.000             1       1       6
+popdifference:                   AWB                    MS         0.000             1       1       4
+popdifference:                   AWB                    PT         0.000             1       1       5
+popdifference:                   AWB                   JWB         0.000             1       1       1
+popdifference:                   AWB                   WWB         0.000             1       1       6
+popdifference:                   AWB                 Xiang         0.000             1       1       1
+popdifference:                   JQH                    LR         0.000             1       1       5
+popdifference:                   JQH                    LW         0.000             1       1       6
+popdifference:                   JQH                    MS         0.000             1       1       4
+popdifference:                   JQH                    PT         0.000             1       1       5
+popdifference:                   JQH                   JWB         0.000             1       1       1
+popdifference:                   JQH                   WWB         0.000             1       1       6
+popdifference:                   JQH                 Xiang         0.000             1       1       1
+popdifference:                    LR                    LW         1.161       0.55953       5       6
+popdifference:                    LR                    MS         7.568     0.0227336       5       4
+popdifference:                    LR                    PT         4.840      0.088907       5       5
+popdifference:                    LR                   JWB         0.000             1       5       1
+popdifference:                    LR                   WWB         0.866      0.648651       5       6
+popdifference:                    LR                 Xiang         0.000             1       5       1
+popdifference:                    LW                    MS         6.469     0.0393892       6       4
+popdifference:                    LW                    PT         0.622      0.732766       6       5
+popdifference:                    LW                   JWB         0.000             1       6       1
+popdifference:                    LW                   WWB         2.895       0.23521       6       6
+popdifference:                    LW                 Xiang         0.000             1       6       1
+popdifference:                    MS                    PT         6.373     0.0413172       4       5
+popdifference:                    MS                   JWB         0.000             1       4       1
+popdifference:                    MS                   WWB         8.138     0.0170952       4       6
+popdifference:                    MS                 Xiang         0.000             1       4       1
+popdifference:                    PT                   JWB         0.000             1       5       1
+popdifference:                    PT                   WWB         8.288     0.0158583       5       6
+popdifference:                    PT                 Xiang         0.000             1       5       1
+popdifference:                   JWB                   WWB         0.000             1       1       6
+popdifference:                   JWB                 Xiang         0.000             1       1       1
+popdifference:                   WWB                 Xiang         0.000             1       6       1
+
+eigbestsnp    1               rs1365  1      4995675     2.976
+eigbestsnp    1               rs1307  1      4992615     2.975
+eigbestsnp    1               rs1249  1      4989475     2.965
+eigbestsnp    1               rs1323  1      4993190     2.950
+eigbestsnp    1               rs1330  1      4993735     2.938
+eigbestsnp    1               rs1443  1      4998775     2.925
+eigbestsnp    1                 rs12  1      4950486     2.919
+eigbestsnp    1                 rs11  1      4950436     2.901
+eigbestsnp    1               rs1195  1      4987775     2.895
+eigbestsnp    1               rs1260  1      4990005     2.889
+eigbestsnp    1               rs1261  1      4990071     2.889
+eigbestsnp    2                rs474  1      4964882     3.353
+eigbestsnp    2                rs615  1      4968654     3.321
+eigbestsnp    2                rs765  1      4972709     3.321
+eigbestsnp    2                rs224  1      4957072     3.313
+eigbestsnp    2                rs640  1      4969283     3.313
+eigbestsnp    2                rs753  1      4972333     3.313
+eigbestsnp    2                rs827  1      4975484     3.313
+eigbestsnp    2                rs830  1      4975772     3.313
+eigbestsnp    2                rs816  1      4974611     3.297
+eigbestsnp    2                rs406  1      4962680     3.278
+eigbestsnp    2                 rs32  1      4951788     3.257
+packedancestrymap output
+##end of smartpca run

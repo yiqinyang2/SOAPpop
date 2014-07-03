@@ -1,0 +1,74 @@
+EIGENSOFT version 4.2, 08/30/11 (for Linux only)
+
+The EIGENSOFT package implements methods from the following 2 papers:
+Patterson et al. 2006 PLoS Genet 2:e190 (population structure)
+Price et al. 2006 Nat Genet 38:904-9 (EIGENSTRAT stratification correction)
+
+NEW features of EIGENSOFT version 4.2 include:
+-- Minor bug fix to include smarteigenstrat.perl in ./bin directory.
+
+NEW features of EIGENSOFT version 4.1 include:
+-- Major bug fix for input of very large data sets, which cause version 4.0beta to crash.
+
+NEW features of EIGENSOFT version 4.0 beta include:
+-- Support for multi-threading
+-- Ability to process non-human data sets (i.e., adjustable number of autosomes)
+-- Hardy-Weinberg filter
+-- Ability to exclude regions from analysis
+-- Ability to reorder SNPs and/or individuals in output of convertf utility
+-- Ability to merge phased data with mergeit utility
+
+See CONVERTF/README for documentation of programs for converting file formats.
+See POPGEN/README for documentation of population structure programs.
+See EIGENSTRAT/README for documentation of EIGENSTRAT programs.
+
+Questions?
+See http://www.hsph.harvard.edu/faculty/alkes-price/files/eigensoftfaq.htm
+or email Samuela Pollack, spollack@hsph.harvard.edu
+
+Executables and source code:
+----------------------------
+All C executables are in the bin/ directory.
+
+We have placed source code for all C executables in the src/ directory, 
+for users who wish to modify and recompile our programs.  For example, to
+recompile the eigenstrat program, type
+"cd src"
+"make eigenstrat"      
+"mv eigenstrat ../bin"
+
+Note that some of our software will only compile if your system has the
+lapack package installed.  (This package is used to compute eigenvectors.)
+Some users may need to change "blas-3" to "blas" in the Makefile,
+depending on how blas and lapack are installed.
+
+If you have trouble compiling and running our code, try compiling and
+running the pcatoy program in the src directory:
+"cd src"
+"make pcatoy"
+"./pcatoy"
+If you are unable to run the pcatoy program successfully, please contact
+your system administrator for help, as this is a systems issue which is
+beyond our scope.  Your system administrator will be able to troubleshoot
+your systems issue using this trivial program.  [You can also try running
+the pcatoy program in the bin directory, which we have already compiled.]
+
+To remake the entire package:
+"cd src"
+"make clobber"
+"make install"
+
+----------------------------
+Acknowledgements:
+We would like to thank John Novembre and Mike Boursnell for code improvements 
+and especially Matt Hanna for the first implementation of multi-threading.
+
+----------------------------
+SOFTWARE COPYRIGHT NOTICE AGREEMENT
+This software and its documentation are copyright (2010) by Harvard University 
+and The Broad Institute. All rights are reserved. This software is supplied 
+without any warranty or guaranteed support whatsoever. Neither Harvard 
+University nor The Broad Institute can be responsible for its use, misuse, or 
+functionality. The software may be freely copied for non-commercial purposes, 
+provided this copyright notice is retained.
+
